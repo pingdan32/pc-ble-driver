@@ -1,4 +1,5 @@
 cmake_minimum_required(VERSION 3.3)
+project(pc-ble-driver-js)
 
 include (cmake/pc-ble-driver.cmake)
 

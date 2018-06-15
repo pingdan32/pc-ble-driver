@@ -103,10 +103,10 @@ private:
      */
     void asyncWrite();
 
-    asio_io_context ioService;
-    boost::asio::serial_port serialPort;
-    asio_io_context::work workNotifier;
-    boost::thread ioWorkThread;
+    asio_io_context* ioService;
+    boost::asio::serial_port* serialPort;
+    asio_io_context::work* workNotifier;
+    std::thread *ioServiceThread;
 
     boost::array<uint8_t, BUFFER_SIZE> readBuffer;
     std::vector<uint8_t> writeBufferVector;

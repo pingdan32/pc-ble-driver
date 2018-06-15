@@ -98,7 +98,7 @@ Note: This step is not required for macOS (OS X).
 
 Use the following link to download the Boost source code:
 
-* [Boost](http://www.boost.org/users/download) (>=1.54.0)
+* [Boost](http://www.boost.org/users/download) (>=1.67.0)
 
 - Download and extract Boost to a folder of your choice.
 - Set the environment variable `BOOST_ROOT` to the path where you have extracted Boost.
