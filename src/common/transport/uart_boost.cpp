@@ -280,9 +280,6 @@ void UartBoost::readHandler(const boost::system::error_code& errorCode, const si
 {
     if (errorCode == boost::system::errc::success)
     {
-        std::stringstream message;
-        message << "received " << bytesTransferred << " bytes";
-        logCallback(SD_RPC_LOG_DEBUG, message.str());
         auto readBufferData = readBuffer.data();
         dataCallback(readBufferData, bytesTransferred);
         asyncRead(); // Initiate a new read
