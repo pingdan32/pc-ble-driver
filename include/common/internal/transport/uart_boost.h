@@ -104,11 +104,6 @@ private:
      */
     void asyncWrite();
 
-    asio_io_context* ioService;
-    boost::asio::serial_port* serialPort;
-    asio_io_context::work* workNotifier;
-    std::thread *ioServiceThread;
-
     boost::array<uint8_t, BUFFER_SIZE> readBuffer;
     std::vector<uint8_t> writeBufferVector;
     std::deque<uint8_t> writeQueue;
@@ -117,8 +112,14 @@ private:
     boost::function<void(const boost::system::error_code, const size_t)> callbackReadHandle;
     boost::function<void(const boost::system::error_code, const size_t)> callbackWriteHandle;
 
-    bool asyncWriteInProgress;
     UartSettingsBoost uartSettingsBoost;
+    bool asyncWriteInProgress;
+    std::thread *ioServiceThread;
+
+    asio_io_context* ioService;
+    boost::asio::serial_port* serialPort;
+
+    asio_io_context::work* workNotifier;
 };
 
 #endif //UART_BOOST_H

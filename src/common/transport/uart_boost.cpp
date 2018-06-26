@@ -55,8 +55,8 @@ UartBoost::UartBoost(const UartCommunicationParameters &communicationParameters)
       queueMutex(),
       callbackReadHandle(),
       callbackWriteHandle(),
-      asyncWriteInProgress(false),
       uartSettingsBoost(communicationParameters),
+      asyncWriteInProgress(false),
       ioServiceThread(nullptr)
 {
     ioService = new asio_io_context();
