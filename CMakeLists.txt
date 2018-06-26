@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.3)
+cmake_minimum_required(VERSION 3.11)
 project(pc-ble-driver)
 
 include (cmake/pc-ble-driver.cmake)
