@@ -80,7 +80,7 @@ public:
 
     /**@brief sends data to serial port to write.
      */
-    uint32_t send(std::vector<uint8_t> &data);
+    uint32_t send(const std::vector<uint8_t> &data);
 
 private:
 
